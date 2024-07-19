@@ -14,9 +14,8 @@ dependencies {
     testImplementation 'org.jboss.arquillian:arquillian-bom:1.1.1.Final'
     testImplementation 'org.jboss.arquillian.junit:arquillian-junit-container:1.1.1.Final'
     testImplementation 'org.wildfly:wildfly-arquillian-container-embedded:8.1.0.Final'
-    testImplementation 'org.wildfly.arquillian:wildfly-arquillian-container-managed'
-    testImplementation 'org.wildfly.arquillian:wildfly-arquillian-container-remote'
-    testImplementation 'org.wildfly.checkstyle:wildfly-checkstyle-config'
+    testImplementation 'org.wildfly.arquillian:wildfly-arquillian-container-managed:2.2.0.Final'
+    testImplementation 'org.wildfly.arquillian:wildfly-arquillian-container-remote:2.2.0.Final'
 
 
     // ShrinkWrap Resolver
