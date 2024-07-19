@@ -11,7 +11,7 @@ dependencies {
 }
 
 
-task build-custom(type: Jar) {
+task buildCustom(type: Jar) {
     from sourceSets.main.output
     archiveBaseName = 'helloworld-tvucicevic-gradle-build'
     archiveVersion = '1.0.0'
@@ -21,12 +21,12 @@ task build-custom(type: Jar) {
     }
 }
 
-task test-custom(type: Test) {
-    dependsOn build-custom
+task testCustom(type: Test) {
+    dependsOn buildCustom
 }
 
 task hello {
-    dependsOn test-custom
+    dependsOn testCustom
     doLast {
         println 'Hello, world!'
     }
