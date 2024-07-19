@@ -55,6 +55,12 @@ task testCustom(type: Test) {
     // logging.captureStandardOutput LogLevel.INFO
 }
 
+task log-tests(type:Exec) {
+    workingDir '.'
+    commandLine 'bash', '-c', 'gradle testCustom --stacktrace >> output.log'
+}
+
+
 task hello {
     dependsOn testCustom
     doLast {
