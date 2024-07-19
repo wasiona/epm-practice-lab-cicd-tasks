@@ -70,3 +70,8 @@ task hello {
     }
     // logging.captureStandardOutput LogLevel.INFO
 }
+
+task logHello(type:Exec) {
+    workingDir '.'
+    commandLine 'bash', '-c', 'gradle hello --stacktrace >> output.log'
+}
