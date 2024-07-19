@@ -48,11 +48,19 @@ task testCustom(type: Test) {
     dependsOn buildCustom
     systemProperty 'java.util.logging.manager', 'org.jboss.logmanager.LogManager'
     exclude '**/ClientArqIT.class'
+    doLast {
+        def testLog = logging.captureStandardOutput(LogLevel.INFO).toString()
+        file('output.log').append("\n" + testLog)
+    }
+    logging.captureStandardOutput LogLevel.INFO
 }
 
 task hello {
     dependsOn testCustom
     doLast {
-        println 'Hello, world!'
+        println 'Hello, World!'
+        def helloLog = logging.captureStandardOutput(LogLevel.INFO).toString()
+        file('output.log').append("\n" + helloLog)
     }
+    logging.captureStandardOutput LogLevel.INFO
 }
