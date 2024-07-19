@@ -11,9 +11,9 @@ dependencies {
     implementation 'javax.annotation:javax.annotation-api:1.3.2'
 
     // Arquillian BOM (Bill Of Materials)
-    // testImplementation 'org.jboss.arquillian:arquillian-bom:1.7.0.Alpha9'
-    // testImplementation 'org.jboss.arquillian.junit:arquillian-junit-container:1.7.0.Alpha9'
-    // testImplementation 'org.jboss.arquillian.container:arquillian-wildfly-embedded:3.0.1.Final'
+    testImplementation 'org.jboss.arquillian:arquillian-bom:1.7.0.Alpha9'
+    testImplementation 'org.jboss.arquillian.junit:arquillian-junit-container:1.7.0.Alpha9'
+    testImplementation 'org.jboss.arquillian.container:arquillian-wildfly-embedded:3.0.1.Final'
 
     // Arquillian BOM (Bill Of Materials)
     testImplementation 'org.jboss.arquillian:arquillian-bom:1.1.1.Final'
