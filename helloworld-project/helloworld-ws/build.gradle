@@ -23,6 +23,12 @@ task buildCustom(type: Jar) {
     }
 }
 
+task log(type:Exec) {
+    workingDir '.'
+    commandLine 'bash', '-c', './gradlew buildCustom --stacktrace > output.log'
+}
+
+
 task testCustom(type: Test) {
     dependsOn buildCustom
 }
